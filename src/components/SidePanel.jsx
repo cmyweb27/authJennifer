@@ -61,14 +61,14 @@ function SidePanel() {
           </div>
           {/* <!-- end .sd-side-panel className --> */}
 
-          <div className="search-keyword">
+          {/* <div className="search-keyword">
             <input type="text" placeholder="Search by keyword" />
             <button type="submit" value="">
               <i className="fa fa-search"></i>
             </button>
-          </div>
+          </div> */}
           {/* <!-- end .search-keyword --> */}
-          <div className="category">
+          {/* <div className="category">
             <h5 className="">Category</h5>
             <div className="toggle-content">
               <h5 className="toggle-title">Fruits</h5>
@@ -209,9 +209,9 @@ function SidePanel() {
                 </li>
               </ul>
             </div>
-          </div>
+          </div> */}
           {/* <!--end .category--> */}
-          <div className="miscellaneous">
+          {/* <div className="miscellaneous">
             <h5 className="">Miscellaneous</h5>
             <div className="radio">
               <span className="radio-input">
@@ -224,7 +224,7 @@ function SidePanel() {
               </span>
             </div>
 
-            {/* <!--end .radio-input --> */}
+            <!--end .radio-input --> 
 
             <span className="checkbox-input">
               <input type="checkbox" id="option-1" checked />
@@ -248,10 +248,10 @@ function SidePanel() {
                 </li>
               </ul>
             </div>
-          </div>
+          </div> */}
           {/* <!-- end .miscellaneous-->
 								<!-- PRICE FILTER : begin --> */}
-          <div className="properties-search-filter">
+          {/* <div className="properties-search-filter">
             <div className="price-filter">
               <h5>Price Range</h5>
               <div className="">
@@ -270,14 +270,14 @@ function SidePanel() {
                     <input type="text" className="range-to" value="$ 500" />
                   </div>
                 </div>
-                {/* <!-- end .slider-range-container --> */}
+                <!-- end .slider-range-container -->
               </div>
             </div>
-            {/* <!-- end .price-filter --> */}
-          </div>
+             <!-- end .price-filter --> 
+          </div> */}
           {/* <!-- end .properties-search-filter --> */}
 
-          <div className="find-on-map">
+          {/* <div className="find-on-map">
             <h5>Search by Region</h5>
             <div className="banner-search">
               <div className="banner-search-inner">
@@ -318,12 +318,12 @@ function SidePanel() {
                 <div className="map-section">
                   <div id="map_canvas"></div>
                 </div>
-                {/* <!-- end .map-section --> */}
+                <!-- end .map-section -->
               </div>
-              {/* <!-- end .banner-search-inner --> */}
+              <!-- end .banner-search-inner -->
             </div>
-            {/* <!-- end .banner-search --> */}
-          </div>
+            <!-- end .banner-search -->
+          </div> */}
           {/* <!-- end .find-on-map --> */}
         </form>
         {/* <!-- end form --> */}
