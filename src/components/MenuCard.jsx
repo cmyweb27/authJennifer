@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import SidePanel from "./SidePanel";
 
 function MenuCard() {
   const [sidesDisplay, setSideDisplay] = useState(false);
@@ -137,8 +138,8 @@ function MenuCard() {
                         <div
                           className={
                             sidesDisplay
-                              ? "sides-display dropdown-option clearfix"
-                              : "dropdown-option clearfix"
+                              ? "dropdown-option clearfix"
+                              : "sides-display dropdown-option clearfix"
                           }
                         >
                           <div className="dropdown-details">
@@ -214,6 +215,7 @@ function MenuCard() {
                 </div>
               </div>
             </div>
+            <SidePanel />
           </div>
         </div>
       </div>

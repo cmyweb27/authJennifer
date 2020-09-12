@@ -7,7 +7,6 @@ function App() {
     <div className="App">
       <Navbar />
       <MenuCard />
-      <h1>just a test</h1>
     </div>
   );
 }
