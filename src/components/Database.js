@@ -20,7 +20,12 @@ function Database() {
   return (
     <div>
       {data.map((x) => (
-        <MenuCard key={x.content} content={x.content} />
+        <MenuCard
+          key={x.content}
+          content={x.content}
+          name={x.itemName}
+          price={x.itemPrice}
+        />
       ))}
     </div>
   );
