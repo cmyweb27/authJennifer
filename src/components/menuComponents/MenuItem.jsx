@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-function MenuItem() {
+function MenuItem(props) {
+  const [sidesDisplay, setSideDisplay] = useState(false);
   return (
-    <div className="menu-with-details">
+    <div>
       <div className="list-image">
         <img src="img/content/menu-list-img.jpg" alt="" />
       </div>

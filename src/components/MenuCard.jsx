@@ -1,9 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import firebase from "./firebase";
 
 import SidePanel from "./SidePanel";
+import MenuItem from "./menuComponents/MenuItem";
 
 function MenuCard(props) {
-  const [sidesDisplay, setSideDisplay] = useState(false);
+  const [data, setData] = useState([]);
+  const db = firebase.firestore();
+  useEffect(() => {
+    db.collection("menuItem")
+      .get()
+      .then((querySnapshot) => {
+        const dat = querySnapshot.docs.map((doc) => {
+          console.log(doc.id);
+          return doc.data();
+        });
+        setData(dat);
+        console.log(dat);
+      });
+  }, []);
   return (
     <div id="main-wrapper">
       <div id="page-content">
@@ -51,8 +66,17 @@ function MenuCard(props) {
                 <div className="tab-pane fade in active" id="tab-1">
                   <div className="all-menu-details">
                     <h5>Daily Menu</h5>
-
-                    {/* <!-- end .item-list --> */}
+                    <div className="menu-with-details">
+                      {" "}
+                      {data.map((x) => (
+                        <MenuItem
+                          key={x.content}
+                          content={x.content}
+                          name={x.itemName}
+                          price={x.itemPrice}
+                        />
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
