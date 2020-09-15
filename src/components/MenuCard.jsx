@@ -6,18 +6,28 @@ function MenuCard() {
   const [sidesDisplay, setSideDisplay] = useState(false);
   const db = firebase.firestore();
   useEffect(() => {
-    db.collection("items")
-      .add({
-        first: "charle",
-        last: "Lovelace",
-        born: 1986,
-      })
-      .then(function (docRef) {
-        console.log("Document written with ID: ", docRef.id);
-      })
-      .catch(function (error) {
-        console.error("Error adding document: ", error);
+    db.collection("menuItem")
+
+      .get()
+
+      .then(function (querySnapshot) {
+        querySnapshot.forEach(function (doc) {
+          // doc.data() is never undefined for query doc snapshots
+          console.log(doc.id, " => ", doc.data().content);
+        });
       });
+    // db.collection("items")
+    //   .add({
+    //     first: "ekpedeme",
+    //     last: "Lovelace",
+    //     born: 1986,
+    //   })
+    //   .then(function (docRef) {
+    //     console.log("Document written with ID: ", docRef.id);
+    //   })
+    //   .catch(function (error) {
+    //     console.error("Error adding document: ", error);
+    //   });
   }, []);
   return (
     <div id="main-wrapper">
