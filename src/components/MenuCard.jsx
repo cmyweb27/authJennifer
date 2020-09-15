@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
-import firebase from "./firebase";
+import React, { useState } from "react";
+
 import SidePanel from "./SidePanel";
 
-function MenuCard() {
+function MenuCard(props) {
   const [sidesDisplay, setSideDisplay] = useState(false);
+<<<<<<< HEAD
   const db = firebase.firestore();
   useEffect(() => {
     db.collection("menuItem")
@@ -29,6 +30,9 @@ function MenuCard() {
     //     console.error("Error adding document: ", error);
     //   });
   }, []);
+=======
+
+>>>>>>> dbd32465f8cfe00998a6e9b8369ff6ea902d3933
   return (
     <div id="main-wrapper">
       <div id="page-content">
@@ -124,9 +128,8 @@ function MenuCard() {
 
                             <p className="m-with-details">
                               <strong>Ingredients:</strong>
-                              <br />5 tiger shrimps, garlic, butter, lemon,
-                              herbs, 5 tiger shrimps, garlic, butter, lemon,
-                              herbs
+                              <br />
+                              {props.content}
                             </p>
 
                             <p className="for-list">
