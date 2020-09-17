@@ -6,8 +6,17 @@ import MenuItem from "./menuComponents/MenuItem";
 
 function MenuCard(props) {
   const [data, setData] = useState([]);
+  const [pic, setPic] = useState("");
+  let storage = firebase.storage();
+  var storageRef = storage.ref();
   const db = firebase.firestore();
+
   useEffect(() => {
+    var starsRef = storageRef.child("fullplatterlast.jpg");
+    starsRef.getDownloadURL().then(function (url) {
+      // Insert url into an <img> tag to "download"
+      setPic(url);
+    });
     db.collection("menuItem")
       .get()
       .then((querySnapshot) => {
@@ -74,6 +83,7 @@ function MenuCard(props) {
                           content={x.content}
                           name={x.itemName}
                           price={x.itemPrice}
+                          image={x.image}
                         />
                       ))}
                     </div>

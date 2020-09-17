@@ -5,7 +5,7 @@ function MenuItem(props) {
   return (
     <div>
       <div className="list-image">
-        <img src="img/content/menu-list-img.jpg" alt="" />
+        <img src={props.image} alt="" />
       </div>
       <div className="all-details">
         <div className="visible-option">
@@ -65,7 +65,6 @@ function MenuItem(props) {
             <button
               onClick={() => {
                 setSideDisplay(!sidesDisplay);
-                console.log(sidesDisplay);
               }}
             >
               Option
