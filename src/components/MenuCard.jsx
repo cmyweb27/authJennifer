@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import firebase from "./firebase";
+import { db, storage } from "./firebase";
 
 import SidePanel from "./SidePanel";
 import MenuItem from "./menuComponents/MenuItem";
@@ -7,9 +7,8 @@ import MenuItem from "./menuComponents/MenuItem";
 function MenuCard(props) {
   const [data, setData] = useState([]);
   const [pic, setPic] = useState("");
-  let storage = firebase.storage();
+
   var storageRef = storage.ref();
-  const db = firebase.firestore();
 
   useEffect(() => {
     var starsRef = storageRef.child("fullplatterlast.jpg");

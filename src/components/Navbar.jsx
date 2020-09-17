@@ -59,7 +59,7 @@ function Navbar() {
                   <span className="icon-bar"></span>
                 </button>
                 <a className="navbar-brand" href="#">
-                  <img src="img/header-logo.png" alt="TakeAway" />
+                  <img src="img/cverted-try.png" alt="TakeAway" height="35" />
                 </a>
               </div>
 
