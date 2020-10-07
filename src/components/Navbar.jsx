@@ -3,6 +3,10 @@ import React, { useState } from "react";
 function Navbar() {
   const [openNow, setOpenNow] = useState(4);
   const [navToggle, setNavToggle] = useState(true);
+  const [menu, setMenuToggle] = useState(true);
+  const [home, setHomeToggle] = useState(true);
+  const [blog, setBlogToggle] = useState(true);
+  const [events, setEventsToggle] = useState(true);
   return (
     <div>
       <header id="header">
@@ -66,11 +70,17 @@ function Navbar() {
               {/* <!-- Collect the nav links, forms, and other content for toggling --> */}
               <div
                 className={
-                  navToggle ? " collapse navbar-collapse" : "navbar-collapse"
+                  navToggle ? " collapse navbar-collapse" : "navbar-collapse "
                 }
+                id="bs-example-navbar-collapse-1"
               >
                 <ul className="nav navbar-nav navbar-right">
-                  <li className="dropdown">
+                  <li
+                    className={home ? "dropdown" : "dropdown open"}
+                    onClick={() => {
+                      setHomeToggle(!home);
+                    }}
+                  >
                     <a
                       href="#"
                       className="dropdown-toggle act"
@@ -87,13 +97,18 @@ function Navbar() {
                       </li>
                     </ul>
                   </li>
-                  <li className="dropdown">
+                  <li
+                    className={menu ? "dropdown" : "dropdown open"}
+                    onClick={() => {
+                      setMenuToggle(!menu);
+                    }}
+                  >
                     <a
                       href="#"
                       className="dropdown-toggle"
                       data-toggle="dropdown"
                     >
-                      Menu Card <span className="caret"></span>
+                      Menu<span className="caret"></span>
                     </a>
                     <ul className="dropdown-menu" role="menu">
                       <li>
@@ -140,7 +155,12 @@ function Navbar() {
                     <a href="our-team.html">Team</a>
                   </li>
 
-                  <li className="dropdown">
+                  <li
+                    className={blog ? "dropdown" : "dropdown open"}
+                    onClick={() => {
+                      setBlogToggle(!blog);
+                    }}
+                  >
                     <a
                       href="#"
                       className="dropdown-toggle"
@@ -157,7 +177,12 @@ function Navbar() {
                       </li>
                     </ul>
                   </li>
-                  <li className="dropdown">
+                  <li
+                    className={events ? "dropdown" : "dropdown open"}
+                    onClick={() => {
+                      setEventsToggle(!events);
+                    }}
+                  >
                     <a
                       href="#"
                       className="dropdown-toggle"

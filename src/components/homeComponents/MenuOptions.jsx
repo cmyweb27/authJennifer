@@ -8,7 +8,7 @@ function MenuOptions() {
           <div className="col-md-3 col-sm-6 col-xs-12 text-center">
             <div className="category-boxes-item">
               <figure>
-                <img src="img/content/starter.jpg" />
+                <img src="https://images.unsplash.com/photo-1523224042829-4731dd15a3bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" />
                 <h4>Starters</h4>
                 <figcaption>
                   {" "}
