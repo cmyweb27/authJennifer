@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { Link } from "react-router-dom";
 function Navbar() {
   const [openNow, setOpenNow] = useState(4);
   const [navToggle, setNavToggle] = useState(true);
@@ -90,7 +90,9 @@ function Navbar() {
                     </a>
                     <ul className="dropdown-menu" role="menu">
                       <li>
-                        <a href="index.html">Home-1</a>
+                        <Link to="/">
+                          <a href="index.html">Home-1</a>
+                        </Link>
                       </li>
                       <li>
                         <a href="index-landingpage.html">Home landing</a>
@@ -112,7 +114,9 @@ function Navbar() {
                     </a>
                     <ul className="dropdown-menu" role="menu">
                       <li>
-                        <a href="menu(view-1).html">Menu( view-1 )</a>
+                        <Link to="/menu">
+                          <a href="menu(view-1).html">Menu</a>
+                        </Link>
                       </li>
                       <li>
                         <a href="menu(view-2).html">Menu( view-2 )</a>
